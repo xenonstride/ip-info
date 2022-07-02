@@ -1,0 +1,152 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+input,button{
+    margin: 0;
+    padding: 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+:root{
+    --heading-color: #fff;
+    --heading-font: 2rem;
+    --main-font: #000;
+    --sub-heading: rgb(86, 86, 86);
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+header{
+    height: 250px;
+    background-image: url(./images/pattern-bg.png);
+    padding: 1rem 2rem;
+    color: var(--heading-color);
+    text-align: center;
+    font-size: var(--heading-font);
+}
+
+#hero-content{
+    width: 75%;
+    position: absolute;
+    left: 12.5%;
+    top: 5rem;
+    z-index: 20;
+}
+
+#ip-input{
+    display: flex;
+    height: 3rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#ip-input>*{
+    height: 100%;
+}
+
+#ip-input>input{
+    width: 92%;
+    padding: 0.75rem 1rem;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    font-size: 1.25rem;
+}
+
+#ip-input>button{
+    width: 8%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    font-size: 1rem;
+}
+
+#ip-details{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+    height: 8rem;
+    align-items: center;
+}
+
+#ip-details>div{
+    height: fit-content;
+}
+
+.hero-details>div{
+    text-align: center;
+    height: 1.5rem;
+}
+
+.details-head{
+    color: var(--sub-heading);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-val{
+    color: var(--main-font);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#ip-loc-map{
+    position: relative;
+    height: calc(100% - 250px);
+    width: 100%;
+    z-index: 10;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+    #hero-content{
+        width: 80%;
+        left: 10%;
+        top: 7rem;
+    }
+
+    #ip-input{
+        width: 80%;
+    }
+
+    #ip-input>input{
+        width: 85%;
+    }
+
+    #ip-input>button{
+        width: 15%;
+    }
+
+    #ip-details{
+        grid-template-columns: none;
+        grid-template-rows: repeat(4,1fr);
+        margin: 0 auto;
+        margin-top: 1rem;
+        width: 80%;
+        height: fit-content;
+    }
+
+    .details-val{
+        font-size: 1.25rem;
+    }
+
+    .details-head{
+        font-size: 0.75rem;
+    }
+}
